@@ -1,0 +1,6 @@
+[project]
+name = "NuitkaHelper"
+version = "0.1.0"
+dependencies = [
+    "PySide6==6.9.1",
+]

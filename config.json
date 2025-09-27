@@ -1,0 +1,34 @@
+{
+    "source_file": "D:/test.py",
+    "output_dir": "D:/myapp",
+    "output_name": "Myapp",
+    "mode": "standalone",
+    "optimization": {
+        "lto": false,
+        "strip": false,
+        "remove_output": false,
+        "no_asserts": false
+    },
+    "os_options": {
+        "windows_console": false,
+        "windows_uac_admin": false
+    },
+    "plugins": {
+        "tk_inter": false,
+        "qt": false,
+        "numpy": false,
+        "pandas": false,
+        "django": false,
+        "multiprocessing": false
+    },
+    "include_files": [],
+    "debug_options": {
+        "show_progress": false,
+        "show_memory": false,
+        "verbose": false
+    },
+    "other_options": {
+        "jobs": 1,
+        "icon_file": "D:\\myico.ico"
+    }
+}
