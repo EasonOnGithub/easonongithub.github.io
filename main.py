@@ -184,10 +184,11 @@ class GUI(QMainWindow):
             include_item = self.ui.includeList.item(i).text().strip()
             if include_item:
                 if "$file" in include_item:
-                    command.append(f"--include-data-files={include_item} {os.path.basename(include_item)}")
+                    command.append(f"--include-data-files={include_item.split(" $file")[0]}={os.path.basename(include_item.split(" $file")[0])}")
                 if "$dir" in include_item:
                     print(os.path.basename(include_item))
-                    command.append(f" --include-data-dir={include_item} {os.path.basename(include_item)}")
+                    command.append(f" --include-data-dir={include_item.split(" $dir")[0]}={os.path.basename(include_item.split(" $dir")[0])}")
+
 
         # 7. 架构设置
         # arch = self.ui.archCmb.currentText()
@@ -458,3 +459,4 @@ if __name__ == "__main__":
     reply = QMessageBox.question(gui.ui, "退出", "是否保存当前配置？", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
     if reply == QMessageBox.Yes:
         gui.save_config()
+
